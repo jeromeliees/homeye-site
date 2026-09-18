@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to turn an old Android phone into a home security camera · Homeye</title>
+<meta name="description" content="A practical guide to reusing a spare Android phone as a home camera: the three approaches, what each one costs you in privacy, and how to make the old phone survive being left on.">
+<link rel="canonical" href="https://jeromeliees.github.io/homeye-site/guide/">
+<link rel="icon" type="image/png" href="../img/favicon.png">
+<meta property="og:title" content="How to turn an old Android phone into a home security camera">
+<meta property="og:description" content="A practical guide to reusing a spare Android phone as a home camera: the three approaches, what each one costs you in privacy, and how to make the old phone survive being left on.">
+<meta property="og:url" content="https://jeromeliees.github.io/homeye-site/guide/">
+<meta property="og:type" content="article">
+<style>
+  :root { --bg:#fff; --fg:#1f2328; --muted:#656d76; --line:#d8dee4; --accent:#276c54; --card:#f6f8fa; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0d1117; --fg:#e6edf3; --muted:#9198a1; --line:#30363d; --accent:#7fc5a8; --card:#161b22; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Noto Sans Thai",sans-serif; }
+  main { max-width:880px; margin:0 auto; padding:48px 20px 64px; }
+  a { color:var(--accent); }
+  header { display:flex; align-items:center; gap:16px; margin-bottom:28px; }
+  header img { width:56px; height:56px; border-radius:14px; }
+  header .name { font-size:22px; font-weight:600; }
+  header .pkg { font-family:ui-monospace,Menlo,monospace; font-size:13px; color:var(--muted); }
+  h1 { font-size:34px; line-height:1.25; margin:0 0 12px; letter-spacing:-.01em; }
+  .lede { font-size:19px; color:var(--muted); margin:0 0 24px; max-width:640px; }
+  .cta { display:inline-flex; align-items:center; gap:10px; background:var(--accent); color:#fff !important;
+    text-decoration:none; padding:13px 22px; border-radius:10px; font-weight:600; font-size:16px; }
+  .cta svg { width:20px; height:20px; flex:0 0 auto; }
+  .ctarow { display:flex; align-items:center; gap:18px; flex-wrap:wrap; margin-bottom:8px; }
+  .ctarow small { color:var(--muted); }
+  h2 { font-size:22px; margin:52px 0 14px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 20px; }
+  .card h3 { margin:0 0 6px; font-size:16px; }
+  .card p { margin:0; color:var(--muted); font-size:15px; }
+  ol.steps { padding-left:22px; margin:0; } ol.steps li { margin-bottom:8px; }
+  .shots { display:flex; gap:12px; overflow-x:auto; padding:4px 0 12px; scroll-snap-type:x mandatory; }
+  .shots img { width:220px; flex:0 0 auto; border-radius:14px; border:1px solid var(--line); scroll-snap-align:start; }
+  ul.plain { padding-left:20px; } ul.plain li { margin-bottom:6px; }
+  .honest { border-left:3px solid var(--accent); padding:4px 0 4px 16px; }
+  .two { display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start; }
+  .two img { width:100%; max-width:300px; display:block; border:1px solid var(--line); border-radius:14px; }
+  @media (max-width:640px) { .two { grid-template-columns:1fr; } h1 { font-size:28px; } }
+  footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+  footer a { margin-right:16px; }
+  .langs { margin-top:14px; font-size:14px; color:var(--muted); line-height:2; }
+  .langs a { margin-right:0; }
+h3 { font-size:18px; margin:28px 0 8px; }
+  p { max-width:680px; }
+  .byline { color:var(--muted); font-size:14px; border-left:3px solid var(--line);
+    padding-left:14px; margin:0 0 28px; }
+  .honest-note { color:var(--muted); font-size:14px; border-top:1px solid var(--line);
+    padding-top:16px; margin-top:44px; }
+  .tablewrap { overflow-x:auto; margin:8px 0 16px; }
+  table { border-collapse:collapse; font-size:14px; min-width:640px; }
+  th, td { border:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top; }
+  thead th { background:var(--card); font-weight:600; }
+  tbody th { background:var(--card); font-weight:600; width:150px; }
+  .sub { font-weight:400; color:var(--muted); font-size:13px; }
+  .backlink { display:inline-block; margin-bottom:24px; font-size:14px; }
+</style>
+</head>
+<body>
+<main>
+  <a class="backlink" href="../">&larr; Homeye</a>
+<h1>How to turn an old Android phone into a home security camera</h1>
+<p class="lede">A spare Android phone already has a camera, a microphone, Wi-Fi and a battery.
+The missing piece is software, and which software you pick decides where the video of your
+living room ends up.</p>
+
+<p class="byline">Written by the developer of Homeye, one of the apps compared below.
+Where that matters, it is said plainly.</p>
+
+<h2>What you need</h2>
+<ul class="plain">
+  <li><strong>The old phone.</strong> Anything from roughly Android 7 onwards still works with
+    most apps. A cracked screen is fine. A dead battery is fine if you keep it plugged in.</li>
+  <li><strong>A charger and an outlet near where you want to watch.</strong> This is the real
+    constraint on where the camera can go, more than Wi-Fi is.</li>
+  <li><strong>A second phone</strong> to watch from, and Wi-Fi that both can join.</li>
+  <li><strong>Something to prop it up.</strong> A cheap clamp mount costs a few dollars. A mug
+    works. The angle matters more than the mount does.</li>
+</ul>
+
+<h2>The three approaches, and what each costs you</h2>
+
+<h3>1. An app that streams through the vendor's cloud</h3>
+<p>This is the biggest category: AlfredCamera, AtHome Camera, and most of what you find by
+searching. You install the app on both phones, sign in with an account, and the camera phone
+uploads to the vendor's servers. The other phone watches from there.</p>
+<p><strong>What you get:</strong> it works from anywhere, including mobile data. Motion clips
+are stored for you. Setup is genuinely easy.</p>
+<p><strong>What it costs:</strong> an account, and a copy of your video leaving your house.
+The better ones encrypt in transit and say they don't look at it, and I have no reason to think
+they're lying. But the video does pass through a machine you don't control, and the free tiers
+are usually funded by ads or by upselling storage.</p>
+
+<h3>2. An app that keeps the video on your own network</h3>
+<p>Both phones stay on the same Wi-Fi and talk to each other directly. Nothing is uploaded.
+IP Webcam works this way: it turns the phone into an MJPEG/RTSP stream you open in a browser,
+VLC or a network video recorder. <a href="../">Homeye</a>, which I wrote, works this way too,
+with the second phone as the viewer instead of a browser.</p>
+<p><strong>What you get:</strong> the video never leaves the building. Usually no account.
+Lower latency, because the path is a few metres instead of a round trip to a data centre.</p>
+<p><strong>What it costs:</strong> you can't check in from the office. That's not a bug anyone
+can patch away cheaply, it's the direct consequence of having no server in the middle. Remote
+access needs either a relay server or your own VPN / port forwarding.</p>
+
+<h3>3. Phone as an IP camera feeding a recorder you run</h3>
+<p>If you already run Home Assistant, Frigate, Blue Iris or a similar system, the phone becomes
+one more RTSP source. IP Webcam is the usual choice.</p>
+<p><strong>What you get:</strong> recording, retention, motion zones, integration with everything
+else you run.</p>
+<p><strong>What it costs:</strong> a machine that stays on, and an afternoon. This is the best
+answer if you're already the kind of person who has that machine.</p>
+
+<h2>How to decide in one question</h2>
+<p>Do you need to watch while you're away from home on mobile data?</p>
+<p>If <strong>yes</strong>, you need a cloud app or your own VPN. There is no third option that
+is honest about itself.</p>
+<p>If <strong>no</strong> — you want to hear the dog from the next room, keep an eye on the front
+door while you're in the garden, watch a sleeping pet from the sofa — then a local-only app gives
+you the same thing without the account and without the upload.</p>
+
+<h2>Setting it up, local-only</h2>
+<p>Using Homeye as the example, because it's the one I can describe exactly:</p>
+<ol class="steps">
+  <li>Install the app on both phones and put both on the same Wi-Fi.</li>
+  <li>On the old phone, choose <em>Use as camera</em>, allow the camera permission, and plug it in.</li>
+  <li>On your everyday phone, choose <em>Use as viewer</em> and scan the QR code shown on the old phone.</li>
+  <li>That's the pairing. From then on, opening the app connects.</li>
+</ol>
+<p>The same shape applies to the other local apps: install, allow, pair or type in an address.</p>
+
+<h2>Making the old phone actually survive</h2>
+<p>This is the part the roundup articles skip, and it's where most of these projects quietly die
+after four days.</p>
+<ul class="plain">
+  <li><strong>Keep it plugged in.</strong> Streaming video is one of the heaviest things a phone
+    can do. On battery you get hours, not days.</li>
+  <li><strong>Exempt the app from battery optimisation.</strong> Android will otherwise suspend it
+    in the background. On stock Android this is Settings → Apps → the app → Battery → Unrestricted.</li>
+  <li><strong>Check your manufacturer's own killer.</strong> Xiaomi, Oppo, Vivo, Huawei, Samsung
+    and others each add a second layer on top of Android's — autostart lists, "protected apps",
+    aggressive memory cleaners. <a href="https://dontkillmyapp.com">dontkillmyapp.com</a> documents
+    the exact path per brand. This single step is the difference between a camera that runs for
+    weeks and one that stops overnight without telling you.</li>
+  <li><strong>Let it get rid of the screen.</strong> A screen running all night wastes power and
+    generates heat for nobody's benefit. Apps that do this properly dim to black while keeping
+    the camera running.</li>
+  <li><strong>Watch the heat.</strong> A charging phone that is also encoding video runs warm.
+    Take the case off, don't put it in direct sun, and don't wedge it into a bookshelf with no air.
+    Sustained heat is what kills the battery, and a swollen battery in an unattended phone is the
+    one genuinely dangerous outcome here. If the back feels hot to hold, improve the airflow.</li>
+  <li><strong>Prefer 5 GHz Wi-Fi if the old phone supports it</strong>, and put it where the signal
+    is good. Video over a weak link is where stutter comes from.</li>
+</ul>
+
+<h2>What to expect, honestly</h2>
+<ul class="plain">
+  <li><strong>Night vision: no.</strong> A phone camera has no infrared illuminator. In a dark
+    room you get a dark, noisy picture. A cheap lamp on a smart plug beats any software setting.</li>
+  <li><strong>Field of view:</strong> narrower than a dedicated camera. Expect to cover one
+    doorway or one corner, not a whole room.</li>
+  <li><strong>Reliability:</strong> lower than a purpose-built camera, because Android is designed
+    to stop background work and every vendor tunes that differently. The honest goal is "it runs
+    for weeks and tells me when it stops", not "it never stops".</li>
+  <li><strong>Audio:</strong> usually good. Phone microphones are better than the ones in cheap
+    cameras.</li>
+</ul>
+
+<h2>Common problems</h2>
+<p><strong>It worked yesterday and today the viewer says offline.</strong> Nine times out of ten
+the ROM killed the app. Go back through the battery-optimisation and autostart settings above.</p>
+<p><strong>The picture froze but it still says connected.</strong> Some apps don't detect this,
+because neither the camera API nor the streaming stack reports "the picture stopped" — they only
+report errors. If your app shows a stale frame indefinitely, that's what's happening.</p>
+<p><strong>The viewer can't find the camera on the same Wi-Fi.</strong> Guest networks and
+"client isolation" on the router block devices from seeing each other. Put both phones on the
+main network.</p>
+<p><strong>Two phones, two different Wi-Fi bands.</strong> Usually fine, but some routers
+separate 2.4 and 5 GHz into isolated networks. If discovery fails, try both on the same band.</p>
+
+<h2>Is a used phone better than a $30 camera?</h2>
+<p>A cheap dedicated camera gives you infrared night vision, a wide lens, and a device designed to
+run unattended for years. A spare phone gives you better audio, a better sensor in daylight, no
+new hardware in the landfill, and — if you pick a local-only app — no account and no cloud.</p>
+<p>If the camera is pointed at something you'd be uncomfortable seeing on someone else's server,
+that last part is the whole argument.</p>
+
+<p class="honest-note">A note on the law and on people: recording audio and video of other people
+has rules that differ by country, and in many places recording conversations without consent is a
+criminal matter. Cameras pointed at shared hallways, neighbours' windows or staff areas are a
+different question from a camera pointed at your own dog. None of this is legal advice.</p>
+  <footer>
+    <a href="https://play.google.com/store/apps/details?id=com.jerome.homeye">Google Play</a>
+    <a href="../">Homeye</a>
+    <a href="https://jeromeliees.github.io/legal/homeye/">Privacy policy</a>
+    <a href="mailto:jeromeliees@gmail.com">Contact</a>
+    <span>&copy; 2026 JeromeLiee</span>
+  </footer>
+</main>
+</body>
+</html>

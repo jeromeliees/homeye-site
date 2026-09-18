@@ -80,4 +80,6 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://jeromeliees.github.io/homeye-site/ru/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://jeromeliees.github.io/homeye-site/ja/"/>
   </url>
+  <url><loc>https://jeromeliees.github.io/homeye-site/guide/</loc></url>
+  <url><loc>https://jeromeliees.github.io/homeye-site/alternatives/</loc></url>
 </urlset>

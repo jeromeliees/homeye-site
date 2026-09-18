@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AlfredCamera alternatives that keep the video on your own network · Homeye</title>
+<meta name="description" content="If you want a spare phone as a home camera but not an account and a cloud upload, here is the honest comparison, including what you give up.">
+<link rel="canonical" href="https://jeromeliees.github.io/homeye-site/alternatives/">
+<link rel="icon" type="image/png" href="../img/favicon.png">
+<meta property="og:title" content="AlfredCamera alternatives that keep the video on your own network">
+<meta property="og:description" content="If you want a spare phone as a home camera but not an account and a cloud upload, here is the honest comparison, including what you give up.">
+<meta property="og:url" content="https://jeromeliees.github.io/homeye-site/alternatives/">
+<meta property="og:type" content="article">
+<style>
+  :root { --bg:#fff; --fg:#1f2328; --muted:#656d76; --line:#d8dee4; --accent:#276c54; --card:#f6f8fa; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0d1117; --fg:#e6edf3; --muted:#9198a1; --line:#30363d; --accent:#7fc5a8; --card:#161b22; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Noto Sans Thai",sans-serif; }
+  main { max-width:880px; margin:0 auto; padding:48px 20px 64px; }
+  a { color:var(--accent); }
+  header { display:flex; align-items:center; gap:16px; margin-bottom:28px; }
+  header img { width:56px; height:56px; border-radius:14px; }
+  header .name { font-size:22px; font-weight:600; }
+  header .pkg { font-family:ui-monospace,Menlo,monospace; font-size:13px; color:var(--muted); }
+  h1 { font-size:34px; line-height:1.25; margin:0 0 12px; letter-spacing:-.01em; }
+  .lede { font-size:19px; color:var(--muted); margin:0 0 24px; max-width:640px; }
+  .cta { display:inline-flex; align-items:center; gap:10px; background:var(--accent); color:#fff !important;
+    text-decoration:none; padding:13px 22px; border-radius:10px; font-weight:600; font-size:16px; }
+  .cta svg { width:20px; height:20px; flex:0 0 auto; }
+  .ctarow { display:flex; align-items:center; gap:18px; flex-wrap:wrap; margin-bottom:8px; }
+  .ctarow small { color:var(--muted); }
+  h2 { font-size:22px; margin:52px 0 14px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 20px; }
+  .card h3 { margin:0 0 6px; font-size:16px; }
+  .card p { margin:0; color:var(--muted); font-size:15px; }
+  ol.steps { padding-left:22px; margin:0; } ol.steps li { margin-bottom:8px; }
+  .shots { display:flex; gap:12px; overflow-x:auto; padding:4px 0 12px; scroll-snap-type:x mandatory; }
+  .shots img { width:220px; flex:0 0 auto; border-radius:14px; border:1px solid var(--line); scroll-snap-align:start; }
+  ul.plain { padding-left:20px; } ul.plain li { margin-bottom:6px; }
+  .honest { border-left:3px solid var(--accent); padding:4px 0 4px 16px; }
+  .two { display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start; }
+  .two img { width:100%; max-width:300px; display:block; border:1px solid var(--line); border-radius:14px; }
+  @media (max-width:640px) { .two { grid-template-columns:1fr; } h1 { font-size:28px; } }
+  footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+  footer a { margin-right:16px; }
+  .langs { margin-top:14px; font-size:14px; color:var(--muted); line-height:2; }
+  .langs a { margin-right:0; }
+h3 { font-size:18px; margin:28px 0 8px; }
+  p { max-width:680px; }
+  .byline { color:var(--muted); font-size:14px; border-left:3px solid var(--line);
+    padding-left:14px; margin:0 0 28px; }
+  .honest-note { color:var(--muted); font-size:14px; border-top:1px solid var(--line);
+    padding-top:16px; margin-top:44px; }
+  .tablewrap { overflow-x:auto; margin:8px 0 16px; }
+  table { border-collapse:collapse; font-size:14px; min-width:640px; }
+  th, td { border:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top; }
+  thead th { background:var(--card); font-weight:600; }
+  tbody th { background:var(--card); font-weight:600; width:150px; }
+  .sub { font-weight:400; color:var(--muted); font-size:13px; }
+  .backlink { display:inline-block; margin-bottom:24px; font-size:14px; }
+</style>
+</head>
+<body>
+<main>
+  <a class="backlink" href="../">&larr; Homeye</a>
+<h1>AlfredCamera alternatives that keep the video on your own network</h1>
+<p class="lede">Most people looking for an alternative aren't unhappy with how AlfredCamera works.
+They're unhappy that a camera pointed at their living room needs an account and uploads to
+somebody's servers. Here's what the other route looks like, and what it costs.</p>
+
+<p class="byline">Written by the developer of Homeye, one of the options below. The comparison
+tries to be fair about where Homeye loses; if you spot something wrong,
+<a href="mailto:jeromeliees@gmail.com">tell me</a> and I'll fix it.</p>
+
+<h2>First: AlfredCamera is not a bad app</h2>
+<p>It has tens of millions of installs because it does the hard thing well. It works from
+anywhere, on mobile data, without you configuring anything. That is genuinely difficult, and
+it's difficult precisely <em>because</em> there's a server in the middle doing the work. If
+remote viewing is what you need, the cloud apps are the honest answer and you should use one.</p>
+<p>Everything below is for people whose answer to "do you need to watch from outside the house?"
+is no.</p>
+
+<h2>The comparison</h2>
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>&nbsp;</th><th>Cloud apps<br><span class="sub">AlfredCamera, AtHome, etc.</span></th>
+        <th>Homeye</th><th>IP Webcam</th></tr>
+  </thead>
+  <tbody>
+    <tr><th>Where the video goes</th><td>Through the vendor's servers</td>
+        <td>Directly between your two phones</td><td>Stays on your network as a stream</td></tr>
+    <tr><th>Account required</th><td>Yes</td><td>No</td><td>No</td></tr>
+    <tr><th>Watch from outside home</th><td><strong>Yes</strong></td>
+        <td>No</td><td>Only with your own VPN or port forwarding</td></tr>
+    <tr><th>What you watch on</th><td>Their app</td><td>A second Android phone</td>
+        <td>Browser, VLC, or an NVR like Home Assistant / Frigate</td></tr>
+    <tr><th>Two-way audio</th><td>Yes</td><td>Yes</td><td>No</td></tr>
+    <tr><th>Recording</th><td>Cloud clips, retention by plan</td>
+        <td>None — live only</td><td>Whatever your recorder does</td></tr>
+    <tr><th>Motion alerts</th><td>Yes, including when the app is closed</td>
+        <td>Only while you're watching; otherwise a list when you reconnect</td>
+        <td>Via your recorder</td></tr>
+    <tr><th>Ads</th><td>Usually on the free tier</td><td>None</td><td>None</td></tr>
+    <tr><th>Setup effort</th><td>Lowest</td><td>Low — scan a QR code</td>
+        <td>Highest — you supply the recorder</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>Where Homeye loses</h2>
+<p>Being specific about this is more useful than a feature list:</p>
+<ul class="plain">
+  <li><strong>No remote viewing.</strong> Both phones must be on the same Wi-Fi. If you're at work
+    on mobile data, it will not connect. This is the current release, not a temporary bug — remote
+    access needs relay servers, which is a different product with different privacy promises.</li>
+  <li><strong>No recording.</strong> Nothing is saved. If you need to go back and look at what
+    happened at 3 a.m., this is the wrong tool.</li>
+  <li><strong>Alerts only reach you while you're watching.</strong> Motion events are logged and
+    shown when you next connect, but nothing pushes a notification to a closed app.</li>
+  <li><strong>Android only.</strong> No iPhone, no web viewer.</li>
+  <li><strong>Two phones required.</strong> The viewer is the app on your own phone.</li>
+</ul>
+
+<h2>Where it wins</h2>
+<ul class="plain">
+  <li>No account, no email, no phone number.</li>
+  <li>Video and audio go phone-to-phone over WebRTC with DTLS-SRTP. There is no media server in
+    the path and no cloud recording.</li>
+  <li>No ads and no analytics SDK in the app.</li>
+  <li>It tells you when it has stopped, and why the picture quality dropped, instead of quietly
+    going stale or blurry.</li>
+  <li>It walks you through the battery-optimisation settings your particular ROM uses to kill
+    background apps — the actual reason these setups fail.</li>
+  <li>Free, 6.7 MB, no in-app purchases.</li>
+</ul>
+
+<h2>What it broadcasts, since you're here for the privacy</h2>
+<p>So the viewer can find the camera, the camera phone announces two things on your local network:
+the name you gave it and the fingerprint of its public key. Nothing else, and nothing outside your
+Wi-Fi. Device identity is a key pair generated in the phone's hardware keystore; the private key
+never leaves the phone. That's written in the
+<a href="https://jeromeliees.github.io/legal/homeye/">privacy policy</a> rather than left for you
+to discover.</p>
+
+<h2>The other local option: IP Webcam</h2>
+<p>If you already run Home Assistant, Frigate, Blue Iris or any NVR, IP Webcam is probably the
+better fit. It turns the phone into a standard MJPEG/RTSP source and then your recorder does the
+rest: retention, motion zones, notifications, multiple cameras on one screen. What you give up is
+simplicity — you're supplying the second half of the system yourself.</p>
+
+<h2>So which one</h2>
+<ul class="plain">
+  <li><strong>Need to watch from outside the house?</strong> Use a cloud app. AlfredCamera is fine.</li>
+  <li><strong>Want a second phone as a monitor, in the house, with nothing uploaded?</strong>
+    <a href="../">Homeye</a>.</li>
+  <li><strong>Already run a recorder?</strong> IP Webcam into it.</li>
+</ul>
+
+<p class="honest-note">More on the general problem, including how to stop your ROM from killing
+the app: <a href="../guide/">how to turn an old Android phone into a home security camera</a>.</p>
+  <footer>
+    <a href="https://play.google.com/store/apps/details?id=com.jerome.homeye">Google Play</a>
+    <a href="../">Homeye</a>
+    <a href="https://jeromeliees.github.io/legal/homeye/">Privacy policy</a>
+    <a href="mailto:jeromeliees@gmail.com">Contact</a>
+    <span>&copy; 2026 JeromeLiee</span>
+  </footer>
+</main>
+</body>
+</html>
