@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Homeye — turn an old Android phone into a home camera. No cloud, no account.</title>
+<meta name="description" content="Homeye turns a spare Android phone into a home camera. Video stays on your Wi-Fi, no account, no ads, no cloud. Free on Google Play.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<meta property="og:title" content="Homeye — old phone, home camera, no cloud">
+<meta property="og:description" content="Two Android phones, one Wi-Fi. Live video, two-way talk and motion alerts — without an account or a server.">
+<meta property="og:image" content="https://jeromeliees.github.io/homeye-site/img/feature.webp">
+<meta property="og:type" content="website">
+<style>
+  :root { --bg:#fff; --fg:#1f2328; --muted:#656d76; --line:#d8dee4; --accent:#276c54; --card:#f6f8fa; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0d1117; --fg:#e6edf3; --muted:#9198a1; --line:#30363d; --accent:#7fc5a8; --card:#161b22; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC",sans-serif; }
+  main { max-width:880px; margin:0 auto; padding:48px 20px 64px; }
+  a { color:var(--accent); }
+  header { display:flex; align-items:center; gap:16px; margin-bottom:28px; }
+  header img { width:56px; height:56px; border-radius:14px; }
+  header .name { font-size:22px; font-weight:600; }
+  header .pkg { font-family:ui-monospace,Menlo,monospace; font-size:13px; color:var(--muted); }
+  h1 { font-size:34px; line-height:1.2; margin:0 0 12px; letter-spacing:-.01em; }
+  .lede { font-size:19px; color:var(--muted); margin:0 0 24px; max-width:640px; }
+  .cta { display:inline-flex; align-items:center; gap:10px; background:var(--accent); color:#fff !important;
+    text-decoration:none; padding:13px 22px; border-radius:10px; font-weight:600; font-size:16px; }
+  .cta svg { width:20px; height:20px; }
+  .ctarow { display:flex; align-items:center; gap:18px; flex-wrap:wrap; margin-bottom:8px; }
+  .ctarow small { color:var(--muted); }
+  h2 { font-size:22px; margin:52px 0 14px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 20px; }
+  .card h3 { margin:0 0 6px; font-size:16px; }
+  .card p { margin:0; color:var(--muted); font-size:15px; }
+  ol.steps { padding-left:22px; margin:0; } ol.steps li { margin-bottom:8px; }
+  .shots { display:flex; gap:12px; overflow-x:auto; padding:4px 0 12px; scroll-snap-type:x mandatory; }
+  .shots img { width:220px; flex:0 0 auto; border-radius:14px; border:1px solid var(--line); scroll-snap-align:start; }
+  ul.plain { padding-left:20px; } ul.plain li { margin-bottom:6px; }
+  .honest { border-left:3px solid var(--accent); padding:4px 0 4px 16px; }
+  video { width:100%; max-width:360px; display:block; border:1px solid var(--line); border-radius:12px; background:#000; }
+  .two { display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start; }
+  @media (max-width:640px) { .two { grid-template-columns:1fr; } h1 { font-size:28px; } }
+  footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+  footer a { margin-right:16px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="img/icon.png" alt="Homeye icon">
+    <div><div class="name">Homeye</div><div class="pkg">com.jerome.homeye · free · Android 7.0+</div></div>
+  </header>
+
+  <h1>That old Android phone in your drawer is a home camera.</h1>
+  <p class="lede">Two phones, one Wi-Fi. Live video, two-way talk and motion alerts —
+    with no account to create, no cloud in the middle, and no ads.</p>
+  <div class="ctarow">
+    <a class="cta" href="https://play.google.com/store/apps/details?id=com.jerome.homeye">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.3 13.3 12 3.6 21.7c-.3-.2-.5-.6-.5-1V3.3c0-.4.2-.8.5-1zm1.3-.6c.3-.1.7 0 1 .2l11.4 6.6-2.6 2.6L5 1.7zm12.9 7.5 3 1.7c.8.5.8 1.7 0 2.2l-3 1.7L15 12l2.8-2.8zm-12.9 13 9.7-9.7 2.6 2.6L5.9 21.7c-.3.2-.7.3-1 .2z"/></svg>
+      Get it on Google Play
+    </a>
+    <small>6.7 MB download · 15 languages · no in-app purchases</small>
+  </div>
+
+  <h2>What makes it different</h2>
+  <div class="grid">
+    <div class="card"><h3>You'll know when it goes down</h3>
+      <p>Both phones count frames themselves. A frozen picture shows as "frozen", with the reason — you don't have to notice it on your own.</p></div>
+    <div class="card"><h3>It tells you why quality dropped</h3>
+      <p>Hot phone or low battery? It steps the video down and says so, on both screens. It never just gets blurry.</p></div>
+    <div class="card"><h3>Nothing leaves your Wi-Fi</h3>
+      <p>The two phones talk to each other directly (WebRTC, DTLS-SRTP). We run no media server and keep no recordings.</p></div>
+    <div class="card"><h3>No account, no analytics SDK</h3>
+      <p>Install and use. We don't collect your email or phone number. The app has no ads and no analytics library.</p></div>
+  </div>
+
+  <h2>How it works</h2>
+  <div class="two">
+    <ol class="steps">
+      <li>Install Homeye on both phones, on the same Wi-Fi.</li>
+      <li>On the old phone, choose <strong>Use as camera</strong>. Plug it in and point it where you want.</li>
+      <li>On your everyday phone, choose <strong>Use as viewer</strong> and scan the QR code on the old phone.</li>
+      <li>Pair once. After that, just open the app.</li>
+    </ol>
+    <div>
+      <video controls playsinline preload="metadata" poster="img/02-live.webp"
+        src="https://jeromeliees.github.io/legal/homeye/fgs-demo/fgs-demo.mp4"></video>
+      <p style="color:var(--muted);font-size:13px;margin:8px 0 0">63 s, recorded on two real phones — starting the camera, then push-to-talk from the viewer.</p>
+    </div>
+  </div>
+
+  <h2>Screens</h2>
+  <div class="shots">
+    <img src="img/01-role.webp" alt="Choose a role: camera or viewer">
+    <img src="img/02-live.webp" alt="Live view with battery, temperature and quality badges">
+    <img src="img/03-pairing.webp" alt="Pairing by QR code or 6-digit code">
+    <img src="img/04-quality.webp" alt="Quality levels that follow temperature and battery">
+    <img src="img/05-stability.webp" alt="Stability check listing the system switches that kill background apps">
+    <img src="img/06-camera-side.webp" alt="Camera phone status screen">
+  </div>
+
+  <h2>What it does</h2>
+  <ul class="plain">
+    <li>Live video and audio, four quality levels that follow temperature and battery</li>
+    <li>Push to talk through the camera phone's speaker</li>
+    <li>Motion detection, with an alert and a thumbnail on the viewer</li>
+    <li>The camera phone can blank its screen and keep working</li>
+    <li>Low-battery and overheating alerts from the camera phone</li>
+    <li>Zoom from the viewer, as far as that phone's lenses allow</li>
+    <li>A "Stability check" that walks you through the battery-optimisation switches on your ROM</li>
+    <li>Diagnostic log export — it goes only where you send it</li>
+  </ul>
+
+  <h2>What this version cannot do — said up front</h2>
+  <div class="honest">
+    <p><strong>It only works on the same Wi-Fi.</strong> When you're out on mobile data, this version cannot connect.
+      Remote access needs servers; it is being evaluated and is not in this release.</p>
+    <p><strong>It cannot promise "never offline".</strong> Android limits background work for everyone, and nobody can
+      promise that. What we do promise is that you will know when it stops.</p>
+    <p><strong>It is not a medical device</strong> and does not replace adult supervision.</p>
+  </div>
+
+  <h2>Privacy, in lines you can check</h2>
+  <ul class="plain">
+    <li>Video and audio travel only inside the Wi-Fi you are on, never through our servers.</li>
+    <li>No account. No email, no phone number.</li>
+    <li>No ads, no analytics SDK.</li>
+    <li>Device identity is a key pair generated in the phone's hardware keystore; the private key never leaves it.</li>
+    <li>On your Wi-Fi the camera phone announces its name and key fingerprint so the viewer can find it — nothing else.</li>
+  </ul>
+  <p><a href="https://jeromeliees.github.io/legal/homeye/">Full privacy policy</a></p>
+
+  <h2>What you need</h2>
+  <p>Two Android phones (7.0 or newer) on the same Wi-Fi. Keep the camera phone plugged in.</p>
+
+  <footer>
+    <a href="https://play.google.com/store/apps/details?id=com.jerome.homeye">Google Play</a>
+    <a href="https://jeromeliees.github.io/legal/homeye/">Privacy policy</a>
+    <a href="mailto:jeromeliees@gmail.com">Contact</a>
+    <span>© 2026 JeromeLiee</span>
+  </footer>
+</main>
+</body>
+</html>
