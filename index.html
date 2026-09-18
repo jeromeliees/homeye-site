@@ -3,12 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Homeye — turn an old Android phone into a home camera. No cloud, no account.</title>
-<meta name="description" content="Homeye turns a spare Android phone into a home camera. Video stays on your Wi-Fi, no account, no ads, no cloud. Free on Google Play.">
+<title>Homeye: Old Phone Security Cam</title>
+<meta name="description" content="No account, no cloud, no ads. Turn a spare Android phone into a home camera.">
+<link rel="canonical" href="https://jeromeliees.github.io/homeye-site/">
+<link rel="alternate" hreflang="en" href="https://jeromeliees.github.io/homeye-site/">
+<link rel="alternate" hreflang="zh-Hans" href="https://jeromeliees.github.io/homeye-site/zh/">
+<link rel="alternate" hreflang="es" href="https://jeromeliees.github.io/homeye-site/es/">
+<link rel="alternate" hreflang="pt" href="https://jeromeliees.github.io/homeye-site/pt/">
+<link rel="alternate" hreflang="id" href="https://jeromeliees.github.io/homeye-site/id/">
+<link rel="alternate" hreflang="th" href="https://jeromeliees.github.io/homeye-site/th/">
+<link rel="alternate" hreflang="ru" href="https://jeromeliees.github.io/homeye-site/ru/">
+<link rel="alternate" hreflang="ja" href="https://jeromeliees.github.io/homeye-site/ja/">
+<link rel="alternate" hreflang="x-default" href="https://jeromeliees.github.io/homeye-site/">
 <link rel="icon" type="image/png" href="img/favicon.png">
-<meta property="og:title" content="Homeye — old phone, home camera, no cloud">
-<meta property="og:description" content="Two Android phones, one Wi-Fi. Live video, two-way talk and motion alerts — without an account or a server.">
+<meta property="og:title" content="Homeye: Old Phone Security Cam">
+<meta property="og:description" content="No account, no cloud, no ads. Turn a spare Android phone into a home camera.">
 <meta property="og:image" content="https://jeromeliees.github.io/homeye-site/img/feature.webp">
+<meta property="og:url" content="https://jeromeliees.github.io/homeye-site/">
 <meta property="og:type" content="website">
 <style>
   :root { --bg:#fff; --fg:#1f2328; --muted:#656d76; --line:#d8dee4; --accent:#276c54; --card:#f6f8fa; }
@@ -17,18 +28,18 @@
   }
   * { box-sizing:border-box; }
   body { margin:0; background:var(--bg); color:var(--fg);
-    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC",sans-serif; }
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Noto Sans Thai",sans-serif; }
   main { max-width:880px; margin:0 auto; padding:48px 20px 64px; }
   a { color:var(--accent); }
   header { display:flex; align-items:center; gap:16px; margin-bottom:28px; }
   header img { width:56px; height:56px; border-radius:14px; }
   header .name { font-size:22px; font-weight:600; }
   header .pkg { font-family:ui-monospace,Menlo,monospace; font-size:13px; color:var(--muted); }
-  h1 { font-size:34px; line-height:1.2; margin:0 0 12px; letter-spacing:-.01em; }
+  h1 { font-size:34px; line-height:1.25; margin:0 0 12px; letter-spacing:-.01em; }
   .lede { font-size:19px; color:var(--muted); margin:0 0 24px; max-width:640px; }
   .cta { display:inline-flex; align-items:center; gap:10px; background:var(--accent); color:#fff !important;
     text-decoration:none; padding:13px 22px; border-radius:10px; font-weight:600; font-size:16px; }
-  .cta svg { width:20px; height:20px; }
+  .cta svg { width:20px; height:20px; flex:0 0 auto; }
   .ctarow { display:flex; align-items:center; gap:18px; flex-wrap:wrap; margin-bottom:8px; }
   .ctarow small { color:var(--muted); }
   h2 { font-size:22px; margin:52px 0 14px; }
@@ -41,23 +52,24 @@
   .shots img { width:220px; flex:0 0 auto; border-radius:14px; border:1px solid var(--line); scroll-snap-align:start; }
   ul.plain { padding-left:20px; } ul.plain li { margin-bottom:6px; }
   .honest { border-left:3px solid var(--accent); padding:4px 0 4px 16px; }
-  video { width:100%; max-width:360px; display:block; border:1px solid var(--line); border-radius:12px; background:#000; }
   .two { display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start; }
+  .two img { width:100%; max-width:300px; display:block; border:1px solid var(--line); border-radius:14px; }
   @media (max-width:640px) { .two { grid-template-columns:1fr; } h1 { font-size:28px; } }
   footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
   footer a { margin-right:16px; }
+  .langs { margin-top:14px; font-size:14px; color:var(--muted); line-height:2; }
+  .langs a { margin-right:0; }
 </style>
 </head>
 <body>
 <main>
   <header>
-    <img src="img/icon.png" alt="Homeye icon">
+    <img src="img/icon.png" alt="Homeye">
     <div><div class="name">Homeye</div><div class="pkg">com.jerome.homeye · free · Android 7.0+</div></div>
   </header>
 
   <h1>That old Android phone in your drawer is a home camera.</h1>
-  <p class="lede">Two phones, one Wi-Fi. Live video, two-way talk and motion alerts —
-    with no account to create, no cloud in the middle, and no ads.</p>
+  <p class="lede">Two phones, one Wi-Fi. Live video, two-way talk and motion alerts — with no account to create, no cloud in the middle, and no ads.</p>
   <div class="ctarow">
     <a class="cta" href="https://play.google.com/store/apps/details?id=com.jerome.homeye">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.3 13.3 12 3.6 21.7c-.3-.2-.5-.6-.5-1V3.3c0-.4.2-.8.5-1zm1.3-.6c.3-.1.7 0 1 .2l11.4 6.6-2.6 2.6L5 1.7zm12.9 7.5 3 1.7c.8.5.8 1.7 0 2.2l-3 1.7L15 12l2.8-2.8zm-12.9 13 9.7-9.7 2.6 2.6L5.9 21.7c-.3.2-.7.3-1 .2z"/></svg>
@@ -65,73 +77,31 @@
     </a>
     <small>6.7 MB download · 15 languages · no in-app purchases</small>
   </div>
+  <p class="lede" style="font-size:16px;margin:20px 0 0">That old Android phone in your drawer becomes a camera as soon as you plug it in. No hardware to buy, no account to create.</p>
 
-  <h2>What makes it different</h2>
+  <h2>It doesn't lie to you</h2>
   <div class="grid">
-    <div class="card"><h3>You'll know when it goes down</h3>
-      <p>Both phones count frames themselves. A frozen picture shows as "frozen", with the reason — you don't have to notice it on your own.</p></div>
-    <div class="card"><h3>It tells you why quality dropped</h3>
-      <p>Hot phone or low battery? It steps the video down and says so, on both screens. It never just gets blurry.</p></div>
-    <div class="card"><h3>Nothing leaves your Wi-Fi</h3>
-      <p>The two phones talk to each other directly (WebRTC, DTLS-SRTP). We run no media server and keep no recordings.</p></div>
-    <div class="card"><h3>No account, no analytics SDK</h3>
-      <p>Install and use. We don't collect your email or phone number. The app has no ads and no analytics library.</p></div>
+    <div class="card"><h3>You'll know when it goes down</h3><p>You'll know when it goes down — you don't have to notice the frozen picture yourself.</p></div><div class="card"><h3>It says why quality dropped</h3><p>When it lowers video quality because the phone is hot or low on battery, it tells you why. It never just gets blurry.</p></div><div class="card"><h3>It walks you through the ROM switches</h3><p>A "Stability check" lists the system switches that quietly kill background apps, and walks you to each one.</p></div><div class="card"><h3>Diagnostics go only where you send them</h3><p>If something breaks, you can export a diagnostic log and send it to the developer. The log is never uploaded anywhere on its own.</p></div>
   </div>
 
   <h2>How it works</h2>
   <div class="two">
-    <ol class="steps">
-      <li>Install Homeye on both phones, on the same Wi-Fi.</li>
-      <li>On the old phone, choose <strong>Use as camera</strong>. Plug it in and point it where you want.</li>
-      <li>On your everyday phone, choose <strong>Use as viewer</strong> and scan the QR code on the old phone.</li>
-      <li>Pair once. After that, just open the app.</li>
-    </ol>
-    <div>
-      <img src="img/03-pairing.webp" alt="Pairing screen: scan the QR code or enter the 6-digit code"
-        style="width:100%;max-width:300px;display:block;border:1px solid var(--line);border-radius:14px">
-    </div>
+    <ol class="steps"><li>Install Homeye on both phones, on the same Wi-Fi.</li><li>On the old phone, pick "Use as camera". Plug it in and point it where you want.</li><li>On your everyday phone, pick "Use as viewer" and scan the QR code on the old phone.</li></ol><p style="margin:12px 0 0">Pair once; after that just open the app.</p>
+    <div><img src="img/en/03-pairing.webp" alt="Pairing: scan the QR code or enter the six-digit code" loading="lazy"></div>
   </div>
 
   <h2>Screens</h2>
-  <div class="shots">
-    <img src="img/01-role.webp" alt="Choose a role: camera or viewer">
-    <img src="img/02-live.webp" alt="Live view with battery, temperature and quality badges">
-    <img src="img/03-pairing.webp" alt="Pairing by QR code or 6-digit code">
-    <img src="img/04-quality.webp" alt="Quality levels that follow temperature and battery">
-    <img src="img/05-stability.webp" alt="Stability check listing the system switches that kill background apps">
-    <img src="img/06-camera-side.webp" alt="Camera phone status screen">
-  </div>
+  <div class="shots"><img src="img/en/01-role.webp" alt="Homeye: Old Phone Security Cam" loading="lazy"><img src="img/en/02-live.webp" alt="Homeye: Old Phone Security Cam" loading="lazy"><img src="img/en/03-pairing.webp" alt="Pairing: scan the QR code or enter the six-digit code" loading="lazy"><img src="img/en/04-quality.webp" alt="Homeye: Old Phone Security Cam" loading="lazy"><img src="img/en/05-stability.webp" alt="Homeye: Old Phone Security Cam" loading="lazy"><img src="img/en/06-camera-side.webp" alt="Homeye: Old Phone Security Cam" loading="lazy"></div>
 
   <h2>What it does</h2>
-  <ul class="plain">
-    <li>Live video and audio, four quality levels that follow temperature and battery</li>
-    <li>Push to talk through the camera phone's speaker</li>
-    <li>Motion detection, with an alert and a thumbnail on the viewer</li>
-    <li>The camera phone can blank its screen and keep working</li>
-    <li>Low-battery and overheating alerts from the camera phone</li>
-    <li>Zoom from the viewer, as far as that phone's lenses allow</li>
-    <li>A "Stability check" that walks you through the battery-optimisation switches on your ROM</li>
-    <li>Diagnostic log export — it goes only where you send it</li>
-  </ul>
+  <ul class="plain"><li>Live video and audio, with four quality levels that follow temperature and battery</li><li>Push to talk</li><li>Motion detection, with an alert and a thumbnail on the viewer</li><li>The camera phone can blank its screen and keep working</li><li>Low-battery and overheating alerts from the camera phone</li><li>Zoom from the viewer, as far as that phone's lenses allow</li><li>15 languages, following your system setting</li></ul>
 
   <h2>What this version cannot do — said up front</h2>
-  <div class="honest">
-    <p><strong>It only works on the same Wi-Fi.</strong> When you're out on mobile data, this version cannot connect.
-      Remote access needs servers; it is being evaluated and is not in this release.</p>
-    <p><strong>It cannot promise "never offline".</strong> Android limits background work for everyone, and nobody can
-      promise that. What we do promise is that you will know when it stops.</p>
-    <p><strong>It is not a medical device</strong> and does not replace adult supervision.</p>
-  </div>
+  <div class="honest"><p><strong>It only works on the same Wi-Fi</strong> When you are out and your phone is on mobile data, this version cannot connect. Remote access needs servers; it is being evaluated and is not in this release.</p><p><strong>It cannot promise "never offline"</strong> Android limits background work for everyone, and nobody can promise that. What we do promise is that you will know when it stops.</p><p>It is not a medical device and does not replace adult supervision.</p></div>
 
-  <h2>Privacy, in lines you can check</h2>
-  <ul class="plain">
-    <li>Video and audio travel only inside the Wi-Fi you are on, never through our servers.</li>
-    <li>No account. No email, no phone number.</li>
-    <li>No ads, no analytics SDK.</li>
-    <li>Device identity is a key pair generated in the phone's hardware keystore; the private key never leaves it.</li>
-    <li>On your Wi-Fi the camera phone announces its name and key fingerprint so the viewer can find it — nothing else.</li>
-  </ul>
-  <p><a href="https://jeromeliees.github.io/legal/homeye/">Full privacy policy</a></p>
+  <h2>Privacy (every line is something you can verify)</h2>
+  <ul class="plain"><li>Video and audio travel only inside the Wi-Fi you are on, never through our servers.</li><li>No account needed. We do not collect your email or phone number.</li><li>No ads, and no analytics SDK.</li><li>We run no media server and offer no cloud recording.</li><li>Device identity is a key pair generated in the phone's hardware keystore; the private key never leaves it.</li><li>So the viewer can find it, the camera phone announces its name and key fingerprint on your Wi-Fi — nothing else.</li></ul>
+  <p><a href="https://jeromeliees.github.io/legal/homeye/">Privacy policy</a></p>
 
   <h2>What you need</h2>
   <p>Two Android phones (7.0 or newer) on the same Wi-Fi. Keep the camera phone plugged in.</p>
@@ -141,6 +111,7 @@
     <a href="https://jeromeliees.github.io/legal/homeye/">Privacy policy</a>
     <a href="mailto:jeromeliees@gmail.com">Contact</a>
     <span>© 2026 JeromeLiee</span>
+    <div class="langs">Language: <strong>English</strong> · <a href="https://jeromeliees.github.io/homeye-site/zh/" hreflang="zh-Hans">中文</a> · <a href="https://jeromeliees.github.io/homeye-site/es/" hreflang="es">Español</a> · <a href="https://jeromeliees.github.io/homeye-site/pt/" hreflang="pt">Português</a> · <a href="https://jeromeliees.github.io/homeye-site/id/" hreflang="id">Bahasa Indonesia</a> · <a href="https://jeromeliees.github.io/homeye-site/th/" hreflang="th">ไทย</a> · <a href="https://jeromeliees.github.io/homeye-site/ru/" hreflang="ru">Русский</a> · <a href="https://jeromeliees.github.io/homeye-site/ja/" hreflang="ja">日本語</a></div>
   </footer>
 </main>
 </body>
