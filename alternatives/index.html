@@ -80,9 +80,9 @@ tries to be fair about where Homeye loses; if you spot something wrong,
 <p>It has tens of millions of installs because it does the hard thing well. It works from
 anywhere, on mobile data, without you configuring anything. That is genuinely difficult, and
 it's difficult precisely <em>because</em> there's a server in the middle doing the work. If
-remote viewing is what you need, the cloud apps are the honest answer and you should use one.</p>
-<p>Everything below is for people whose answer to "do you need to watch from outside the house?"
-is no.</p>
+remote viewing is what you need, compare the actual remote allowance and recording limits of each plan.</p>
+<p><strong>Updated October 18, 2026:</strong> Homeye 2.0 is now on Google Play with remote viewing,
+local motion recordings and push notifications. It still needs two Android phones; there is no iPhone viewer in the published release.</p>
 
 <h2>The comparison</h2>
 <div class="tablewrap">
@@ -93,17 +93,17 @@ is no.</p>
   </thead>
   <tbody>
     <tr><th>Where the video goes</th><td>Through the vendor's servers</td>
-        <td>Directly between your two phones</td><td>Stays on your network as a stream</td></tr>
+        <td>Local Wi-Fi at home; direct or encrypted relay when away</td><td>Stays on your network as a stream</td></tr>
     <tr><th>Account required</th><td>Yes</td><td>No</td><td>No</td></tr>
     <tr><th>Watch from outside home</th><td><strong>Yes</strong></td>
-        <td>No</td><td>Only with your own VPN or port forwarding</td></tr>
+        <td>Yes, with a daily allowance</td><td>Only with your own VPN or port forwarding</td></tr>
     <tr><th>What you watch on</th><td>Their app</td><td>A second Android phone</td>
         <td>Browser, VLC, or an NVR like Home Assistant / Frigate</td></tr>
     <tr><th>Two-way audio</th><td>Yes</td><td>Yes</td><td>No</td></tr>
     <tr><th>Recording</th><td>Cloud clips, retention by plan</td>
-        <td>None — live only</td><td>Whatever your recorder does</td></tr>
+        <td>Motion clips stored on the camera phone</td><td>Whatever your recorder does</td></tr>
     <tr><th>Motion alerts</th><td>Yes, including when the app is closed</td>
-        <td>Only while you're watching; otherwise a list when you reconnect</td>
+        <td>Push notifications; camera must remain online</td>
         <td>Via your recorder</td></tr>
     <tr><th>Ads</th><td>Usually on the free tier</td><td>None</td><td>None</td></tr>
     <tr><th>Setup effort</th><td>Lowest</td><td>Low — scan a QR code</td>
@@ -115,28 +115,27 @@ is no.</p>
 <h2>Where Homeye loses</h2>
 <p>Being specific about this is more useful than a feature list:</p>
 <ul class="plain">
-  <li><strong>No remote viewing.</strong> Both phones must be on the same Wi-Fi. If you're at work
-    on mobile data, it will not connect. This is the current release, not a temporary bug — remote
-    access needs relay servers, which is a different product with different privacy promises.</li>
-  <li><strong>No recording.</strong> Nothing is saved. If you need to go back and look at what
-    happened at 3 a.m., this is the wrong tool.</li>
-  <li><strong>Alerts only reach you while you're watching.</strong> Motion events are logged and
-    shown when you next connect, but nothing pushes a notification to a closed app.</li>
+  <li><strong>Remote viewing is metered.</strong> Free includes 5 minutes a day per camera;
+    Plus includes up to 8 hours. Both phones need internet access.</li>
+  <li><strong>No cloud recording.</strong> Motion clips stay on the camera phone, up to 24 hours
+    free or up to 7 days with Plus, subject to available storage. This is not continuous cloud recording.</li>
+  <li><strong>The camera must stay online.</strong> Push alerts and remote playback cannot wake
+    a camera app that Android has stopped.</li>
   <li><strong>Android only.</strong> No iPhone, no web viewer.</li>
   <li><strong>Two phones required.</strong> The viewer is the app on your own phone.</li>
 </ul>
 
 <h2>Where it wins</h2>
 <ul class="plain">
-  <li>No account, no email, no phone number.</li>
-  <li>Video and audio go phone-to-phone over WebRTC with DTLS-SRTP. There is no media server in
-    the path and no cloud recording.</li>
+  <li>No app account required. Feedback may include optional contact information.</li>
+  <li>Video and audio use WebRTC DTLS-SRTP between the phones. Remote connections use a
+    signaling service and may relay encrypted packets; recordings remain on the camera phone.</li>
   <li>No ads. The Play edition uses Google Analytics for basic connection and usage analytics; video and audio are not sent to analytics. See the <a href="https://jeromeliees.github.io/legal/homeye/">privacy policy</a>.</li>
   <li>It tells you when it has stopped, and why the picture quality dropped, instead of quietly
     going stale or blurry.</li>
   <li>It walks you through the battery-optimisation settings your particular ROM uses to kill
     background apps — the actual reason these setups fail.</li>
-  <li>Free, 6.7 MB, no in-app purchases.</li>
+  <li>Free basic features, no ads, optional monthly or yearly Homeye Plus for up to 5 cameras.</li>
 </ul>
 
 <h2>What it broadcasts, since you're here for the privacy</h2>
@@ -155,7 +154,8 @@ simplicity — you're supplying the second half of the system yourself.</p>
 
 <h2>So which one</h2>
 <ul class="plain">
-  <li><strong>Need to watch from outside the house?</strong> Use a cloud app. AlfredCamera is fine.</li>
+  <li><strong>Need to watch from outside the house?</strong> Compare Homeye's remote allowance
+    with alternatives. Free is for brief check-ins; longer viewing is a paid feature.</li>
   <li><strong>Want a second phone as a monitor, in the house, with nothing uploaded?</strong>
     <a href="../">Homeye</a>.</li>
   <li><strong>Already run a recorder?</strong> IP Webcam into it.</li>
@@ -166,7 +166,7 @@ the app: <a href="../guide/">how to turn an old Android phone into a home securi
   <footer>
     <a href="https://play.google.com/store/apps/details?id=com.jerome.homeye">Google Play</a>
     <a href="../">Homeye</a>
-    <a href="https://jeromeliees.github.io/legal/homeye/">Privacy policy</a>
+    <a href="https://jeromeliee.com/homeye/privacy/">Privacy policy</a>
     <a href="mailto:jeromeliees@gmail.com">Contact</a>
     <span>&copy; 2026 JeromeLiee</span>
   </footer>
